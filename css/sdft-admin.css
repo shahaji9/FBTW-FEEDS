@@ -1,0 +1,11 @@
+/*
+    Admin side css
+    Created on : 19 Dec, 2016, 12:50:05 PM
+    Author     : Shahaji Deshmukh
+*/
+.follow-btn-show-hide{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
