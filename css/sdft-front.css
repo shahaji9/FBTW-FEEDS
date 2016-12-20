@@ -1,0 +1,61 @@
+/*
+    Frontend css
+    Created on : 13 December, 2016, 11:53:40 AM
+    Author     : Shahaji Deshmukh
+*/
+#fb-tw-feeds{
+    display: none;
+    position: fixed;
+    min-height: 120px;
+    width: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+}
+#fb-tw-feeds embed, #fb-tw-feeds iframe, #fb-tw-feeds object{
+    margin-bottom: 0px;
+}
+#fb-tw-feeds .facebook_twitter_common{
+    position: absolute;
+    z-index: 999997;
+}
+#fb-tw-feeds .facebook_twitter_common .fb-tw-icons{
+    height: 60px;
+    width: 34px;    
+    cursor: pointer;
+    position: relative;
+    z-index: 999998;
+}
+#fb-tw-feeds .facebook_feeds {
+    top: 0px;
+}    
+#fb-tw-feeds .facebook_feeds #facebook_icon {
+    background: url(../images/icon-fb.png) no-repeat;        
+}
+#fb-tw-feeds .facebook_feeds .facebook_box {
+    background-color: #FFF;
+    border: 4px solid #3B5998;
+    top: -60px;
+    position: relative;
+    z-index: 999999;
+}
+#fb-tw-feeds .twitter-follow-box{
+    float: left;
+    padding: 5px 10px 0px 10px;
+}
+#fb-tw-feeds .twitter_feeds {
+    top: 60px;
+}
+#fb-tw-feeds .twitter_feeds #twitter_icon {
+    background: url(../images/icon-tw.png) no-repeat;        
+}
+#fb-tw-feeds .twitter_feeds .twitter_box {
+    background-color: #FFF;
+    border: 4px solid #32def4;
+    top: -60px;
+    position: relative;
+    z-index: 999999;
+}
