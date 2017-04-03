@@ -236,6 +236,27 @@ class sdfbtwPageSettings {
                 'facebook_twitter_feeds_options', // Page
                 'setting_section_styles' // Section ID           
         );
+        
+        
+        /*********************************************************************************************
+         * 
+         *  General Settings
+         * 
+         * *******************************************************************************************/
+        add_settings_section(
+                'setting_section_general_settings', // ID
+                'General Settings', // Title
+                array($this, 'print_setting_section_general_settings'), // Callback
+                'facebook_twitter_feeds_options' // Page
+        );
+        
+        add_settings_field(
+                'section_general_settings_hide_from_homepage', // ID
+                'Hide From Homepage:', // Title 
+                array($this, 'section_general_settings_hide_from_homepage_callback'), // Callback
+                'facebook_twitter_feeds_options', // Page
+                'setting_section_general_settings' // Section ID           
+        );
     }
 
     /**
@@ -297,6 +318,9 @@ class sdfbtwPageSettings {
         
         if (isset($input['section_visible_on_minimum_device_width']))
             $new_input['section_visible_on_minimum_device_width'] = $input['section_visible_on_minimum_device_width'];
+        
+        if (isset($input['section_general_settings_hide_from_homepage']))
+            $new_input['section_general_settings_hide_from_homepage'] = $input['section_general_settings_hide_from_homepage'];
 
         return $new_input;
     }
@@ -316,6 +340,9 @@ class sdfbtwPageSettings {
         //print 'CSS settings';
     }
 
+    public function print_setting_section_general_settings() {
+        //print 'General settings';
+    }
     /*     * **********************************************************************************
      *
      *  Get the settings option array and print one of its values description
@@ -436,6 +463,13 @@ class sdfbtwPageSettings {
                 '<input type="text" id="section_visible_on_minimum_device_width" name="facebook_twitter_feeds_options[section_visible_on_minimum_device_width]" value="%s" placeholder="Minimum device width 768" /><span class="description">Please insert device minimum width eg. 768</span>', isset($this->options['section_visible_on_minimum_device_width']) ? esc_attr($this->options['section_visible_on_minimum_device_width']) : ''
         );
     }
+    
+    // Section twitter follow button
+    public function section_general_settings_hide_from_homepage_callback() {
+        printf(
+                '<input type="checkbox" id="section_general_settings_hide_from_homepage" class="hide-from-home-page" name="facebook_twitter_feeds_options[section_general_settings_hide_from_homepage]" value="1"' . checked( 1, $this->options['section_general_settings_hide_from_homepage'], false ) . '/>'
+        );
+    }    
 }
 
 /* * **Class End here**** */

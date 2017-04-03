@@ -1,8 +1,8 @@
 <?php
 /*
-  Plugin Name: FBTW Feeds
+  Plugin Name: Facebook Twitter Feeds
   Description: A powerful Facebook and Twitter integration that allows you to display facebook (timeline, events and messages), twitter follow button and twitter timeline for your wordpress website.
-  Version: 1.0
+  Version: 1.1
   Author: Shahaji Deshmukh
   Author URI: https://profiles.wordpress.org/shahaji9
   Plugin URI: https://wordpress.org/plugins/fbtw-feeds
